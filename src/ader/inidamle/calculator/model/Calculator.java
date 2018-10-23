@@ -1,6 +1,7 @@
 package ader.inidamle.calculator.model;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class Calculator extends AbstractCalculator {
 
@@ -21,9 +22,7 @@ public class Calculator extends AbstractCalculator {
     public void input(String data) {
         String[] t = new String[]{"7", "8", "9", "4", "5", "6", "1", "2", "3", "0", ".", "+/-", "<-"};
         ArrayList<String> operands = new ArrayList<>();
-        for (String string : t) {
-            operands.add(string);
-        }
+        Arrays.stream(t).forEach(pS -> operands.add(pS));
 
         if (operands.contains(data)) {
             mOperand.input(data);
@@ -47,6 +46,8 @@ public class Calculator extends AbstractCalculator {
                 }
             } else if (data.equals("=")) {
                 setOperator(null);
+                mOperand.input(mStringResult);
+                operatorChanged = false;
             } else if (data.equals("C")) {
                 mOperand = new Operand();
                 setOperator(null);

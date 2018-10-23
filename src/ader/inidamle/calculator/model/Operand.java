@@ -5,7 +5,7 @@ public class Operand {
     private String stringValue = "0";
     private double doubleValue = 0;
 
-    void input(String pData) {
+    public void input(String pData) {
         switch (pData) {
             case "+/-":
                 reverseSign();
@@ -17,6 +17,19 @@ public class Operand {
                 add(pData);
                 break;
         }
+    }
+
+    public double getDoubleValue() {
+        return doubleValue;
+    }
+
+    public String getStringValue() {
+        return stringValue;
+    }
+
+    private void setStringValue(String pStringValue) {
+        stringValue = pStringValue;
+        doubleValue = Double.valueOf(pStringValue);
     }
 
     private void add(String pData) {
@@ -48,24 +61,7 @@ public class Operand {
     private void reverseSign() {
         if (getStringValue().contains("-"))
             setStringValue(getStringValue().substring(1));
-        else if (getDoubleValue() != 0)
+        else if (doubleValue != 0)
             setStringValue("-" + getStringValue());
-    }
-
-    double getDoubleValue() {
-        return doubleValue;
-    }
-
-    private void setDoubleValue(double pDoubleValue) {
-        doubleValue = pDoubleValue;
-    }
-
-    String getStringValue() {
-        return stringValue;
-    }
-
-    private void setStringValue(String pStringValue) {
-        stringValue = pStringValue;
-        setDoubleValue(Double.valueOf(pStringValue));
     }
 }
