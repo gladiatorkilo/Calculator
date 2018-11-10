@@ -1,7 +1,7 @@
-package ader.inidamle.calculator.model;
+package com.inidamleader.calculator.model;
 
-import ader.inidamle.calculator.observer.Observable;
-import ader.inidamle.calculator.observer.Observer;
+import com.inidamleader.calculator.observer.Observable;
+import com.inidamleader.calculator.observer.Observer;
 
 import java.util.ArrayList;
 

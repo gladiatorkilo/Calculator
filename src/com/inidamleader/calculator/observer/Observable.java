@@ -1,4 +1,4 @@
-package ader.inidamle.calculator.observer;
+package com.inidamleader.calculator.observer;
 
 public interface Observable {
 

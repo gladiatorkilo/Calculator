@@ -1,4 +1,4 @@
-package ader.inidamle.calculator.model;
+package com.inidamleader.calculator.model;
 
 import java.util.ArrayList;
 import java.util.Arrays;

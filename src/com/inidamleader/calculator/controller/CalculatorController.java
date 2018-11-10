@@ -1,9 +1,9 @@
-package ader.inidamle.calculator.controller;
+package com.inidamleader.calculator.controller;
 
-import ader.inidamle.calculator.model.AbstractCalculator;
-import ader.inidamle.calculator.model.Calculator;
-import ader.inidamle.calculator.observer.Observable;
-import ader.inidamle.calculator.observer.Observer;
+import com.inidamleader.calculator.model.AbstractCalculator;
+import com.inidamleader.calculator.model.Calculator;
+import com.inidamleader.calculator.observer.Observable;
+import com.inidamleader.calculator.observer.Observer;
 import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
